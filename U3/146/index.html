@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style/style.css?rnd=132">
+  
+    <!--***** dos lineas de scripts para guardar imagen-->
+    <script type="text/javascript" src="../../js/html2canvas.js"></script>
+    <script type="text/javascript" src="../../js/html2canvas.min.js"></script>
+    <!--***** Fin de dos lineas de scripts para guardar imagen-->
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+      <div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1099.000000" width="872.000000" src ="bgimg/fondo.jpg"/></nobr></div>
+        <!--Empezar a agregar contenido-->
+        
+		<span style="position: absolute; top: 167px; left: 510px">
+			<textarea rows = "1" cols = "5" maxlength = "5" id="quim_p146res1"></textarea>
+		</span>
+      <span style="position: absolute; top: 218px; left: 207px">
+	  <textarea rows = "1" cols = "5" maxlength = "5" id="quim_p146res2"></textarea>
+		</span>
+      <span style="position: absolute; top: 268px; left: 197px">
+	  <textarea rows = "1" cols = "5" maxlength = "5" id="quim_p146res3"></textarea>
+		</span>
+      <span style="position: absolute; top: 298px; left: 543px">
+			<textarea rows = "1" cols = "5" maxlength = "5" id="quim_p146res4"></textarea>
+		</span>
+      
+      <span style="position: absolute; top: 568px; left: 152px">
+			<textarea rows = "1" cols = "80" maxlength = "80" id="quim_p146res5"></textarea><br>
+			<textarea rows = "1" cols = "80" maxlength = "80" id="quim_p146res6"></textarea>
+		</span>
+      <span style="position: absolute; top: 639px; left: 150px">
+			<textarea rows = "1" cols = "80" maxlength = "80" id="quim_p146res7"></textarea><br>
+			<textarea rows = "1" cols = "80" maxlength = "80" id="quim_p146res8"></textarea><br>
+	  <textarea rows = "1" cols = "80" maxlength = "80" id="quim_p146res9"></textarea>
+		</span>
+      <span style="position: absolute; top: 730px; left: 150px">
+			<textarea rows = "1" cols = "80" maxlength = "80" id="quim_p146res10"></textarea><br>
+			<textarea rows = "1" cols = "80" maxlength = "80" id="quim_p146res11"></textarea><br>
+	  <textarea rows = "1" cols = "80" maxlength = "80" id="quim_p146res12"></textarea>
+		</span>
+      <span style="position: absolute; top: 820px; left: 151px">
+			<textarea rows = "1" cols = "80" maxlength = "80" id="quim_p146res13"></textarea><br>
+			<textarea rows = "1" cols = "80" maxlength = "80" id="quim_p146res14"></textarea><br>
+	  <textarea rows = "1" cols = "80" maxlength = "80" id="quim_p146res15"></textarea>
+		</span>
+      <span style="position: absolute; top: 911px; left: 152px">
+			<textarea rows = "1" cols = "80" maxlength = "80" id="quim_p146res16"></textarea><br>
+			<textarea rows = "1" cols = "80" maxlength = "80" id="quim_p146res17"></textarea><br>
+			<textarea rows = "1" cols = "80" maxlength = "80" id="quim_p146res18"></textarea>
+		</span>
+      <div id="quim_p146res19-zone" style="position: absolute; top: 457px; left: 133px; width: 667px; height: 40px;">
+			<img id="quim_p146res19" src="bgimg/01.jpg" height="41" width="666"> 
+		</div>
+     <script type="text/javascript">
+            var quim_p146res19 = document.getElementById('quim_p146res19');
+            if (localStorage.getItem("Img_quim_p146res19") === null) {
+                var dataImage = "bgimg/01.jpg"
+            }
+            else {
+                var dataImage = localStorage.getItem('Img_quim_p146res19');
+            }
+            quim_p146res19.src = dataImage;
+            var previewZone = document.getElementById('quim_p146res19-zone');
+            previewZone.appendChild(quim_p146res19);
+        </script>
+
+        <div id="divFileUpload" style="position: absolute; top: 428px; left: 547px">
+            <input class="btn btn-primary" id="file-upload" type="file" accept="image/*" />
+        </div>
+      
+       
+        <!--Fin del contenido-->
+           <!-- FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<form style="margin-top: 1070px;margin-left: 190px; position: absolute; z-index: 2;" id="myForm" action="../../send.php" method="post">
+			<textarea style="display:none;" id="myInput" name = "imagen" maxlength="10"></textarea>
+			<input type="button" onclick="save_data()" value="Guardar"  class="btn btn-primary">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" onclick="send_data(); loader(); return false" value="Enviar" class="btn btn-primary"> 
+			<input type="hidden" id="quim_regNA" name="quim_regNA">
+			<input type="hidden" id="quim_regGP" name="quim_regGP">
+			<input type="hidden" id="quim_regCA" name="quim_regCA">
+			<input type="hidden" id="quim_regND" name="quim_regND">
+			<input type="hidden" id="quim_regCD" name="quim_regCD">
+		</form>
+
+		<!-- FIN FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<div id="loader" style="display:none; margin-top: 1060px;margin-left: 190px; position: absolute; z-index: 2;">
+			<img src="../../img/carga.gif"  width="180px" height="65px">
+		</div>
+            
+    </div>       
+</body>
+<script>
+    function readFile(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+     
+            reader.onload = function (e) {
+                var quim_p146res19 = document.getElementById('quim_p146res19');
+                //e.target.result contents the base64 data from the image uploaded
+                quim_p146res19.src = e.target.result;
+                console.log(e.target.result);
+     
+                var previewZone = document.getElementById('quim_p146res19-zone');
+                previewZone.appendChild(quim_p146res19);
+            }
+    
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+     
+    var fileUpload = document.getElementById('file-upload');
+    fileUpload.onchange = function (e) {
+        //document.getElementById('file-preview-zone').innerHTML = "";
+        readFile(e.srcElement);
+    }
+     
+</script>
+<script type="text/javascript">
+	//Carga datos del registro
+    document.getElementById('quim_regNA').value = localStorage.getItem('quim_regNA');
+    document.getElementById('quim_regGP').value = localStorage.getItem('quim_regGP');
+    document.getElementById('quim_regCA').value = localStorage.getItem('quim_regCA');
+    document.getElementById('quim_regND').value = localStorage.getItem('quim_regND');
+    document.getElementById('quim_regCD').value = localStorage.getItem('quim_regCD');
+
+	 document.getElementById('quim_p146res1').value = localStorage.getItem('quim_p146res1');
+    document.getElementById('quim_p146res2').value = localStorage.getItem('quim_p146res2');
+    document.getElementById('quim_p146res3').value = localStorage.getItem('quim_p146res3');
+    document.getElementById('quim_p146res4').value = localStorage.getItem('quim_p146res4');
+    document.getElementById('quim_p146res5').value = localStorage.getItem('quim_p146res5');
+    document.getElementById('quim_p146res6').value = localStorage.getItem('quim_p146res6');
+    document.getElementById('quim_p146res7').value = localStorage.getItem('quim_p146res7');
+    document.getElementById('quim_p146res8').value = localStorage.getItem('quim_p146res8');
+    document.getElementById('quim_p146res9').value = localStorage.getItem('quim_p146res9');
+    document.getElementById('quim_p146res10').value = localStorage.getItem('quim_p146res10');
+    document.getElementById('quim_p146res11').value = localStorage.getItem('quim_p146res11');
+    document.getElementById('quim_p146res12').value = localStorage.getItem('quim_p146res12');
+    document.getElementById('quim_p146res13').value = localStorage.getItem('quim_p146res13');
+    document.getElementById('quim_p146res14').value = localStorage.getItem('quim_p146res14');
+    document.getElementById('quim_p146res15').value = localStorage.getItem('quim_p146res15');
+    document.getElementById('quim_p146res16').value = localStorage.getItem('quim_p146res16');
+    document.getElementById('quim_p146res17').value = localStorage.getItem('quim_p146res17');
+    document.getElementById('quim_p146res18').value = localStorage.getItem('quim_p146res18');
+    
+    function save_data(){
+		 //local storage
+        bannerImage = document.getElementById('quim_p146res19').src;
+        localStorage.setItem("Img_quim_p146res19", bannerImage);
+		
+        var quim_p146res1 = document.getElementById('quim_p146res1').value;
+        localStorage.setItem('quim_p146res1', quim_p146res1);
+        var quim_p146res2 = document.getElementById('quim_p146res2').value;
+        localStorage.setItem('quim_p146res2', quim_p146res2);
+        var quim_p146res3 = document.getElementById('quim_p146res3').value;
+        localStorage.setItem('quim_p146res3', quim_p146res3);
+        var quim_p146res4 = document.getElementById('quim_p146res4').value;
+        localStorage.setItem('quim_p146res4', quim_p146res4);
+        var quim_p146res5 = document.getElementById('quim_p146res5').value;
+        localStorage.setItem('quim_p146res5', quim_p146res5);
+        var quim_p146res6 = document.getElementById('quim_p146res6').value;
+        localStorage.setItem('quim_p146res6', quim_p146res6);
+        var quim_p146res7 = document.getElementById('quim_p146res7').value;
+        localStorage.setItem('quim_p146res7', quim_p146res7);
+        var quim_p146res8 = document.getElementById('quim_p146res8').value;
+        localStorage.setItem('quim_p146res8', quim_p146res8);
+        var quim_p146res9 = document.getElementById('quim_p146res9').value;
+        localStorage.setItem('quim_p146res9', quim_p146res9);
+        var quim_p146res10 = document.getElementById('quim_p146res10').value;
+        localStorage.setItem('quim_p146res10', quim_p146res10);
+        var quim_p146res11 = document.getElementById('quim_p146res11').value;
+        localStorage.setItem('quim_p146res11', quim_p146res11);
+        var quim_p146res12 = document.getElementById('quim_p146res12').value;
+        localStorage.setItem('quim_p146res12', quim_p146res12);
+        var quim_p146res13 = document.getElementById('quim_p146res13').value;
+        localStorage.setItem('quim_p146res13', quim_p146res13);
+        var quim_p146res14 = document.getElementById('quim_p146res14').value;
+        localStorage.setItem('quim_p146res14', quim_p146res14);
+        var quim_p146res15 = document.getElementById('quim_p146res15').value;
+        localStorage.setItem('quim_p146res15', quim_p146res15);
+        var quim_p146res16 = document.getElementById('quim_p146res16').value;
+        localStorage.setItem('quim_p146res16', quim_p146res16);
+        var quim_p146res17 = document.getElementById('quim_p146res17').value;
+        localStorage.setItem('quim_p146res17', quim_p146res17);
+        var quim_p146res18 = document.getElementById('quim_p146res18').value;
+        localStorage.setItem('quim_p146res18', quim_p146res18);
+        
+        alert("Guardado correctamente");
+    }
+
+    function send_data(){
+        pantallazo();
+        setTimeout(function(){document.getElementById("myForm").submit();}, 3000);
+    }
+
+    function pantallazo(){
+
+        html2canvas(document.body).then(canvas => {
+        	var dataURL = canvas.toDataURL();
+            console.log(dataURL);
+            document.getElementById("myInput").value = dataURL;
+            var canvas = document.createElement("canvas");
+            var ctx=canvas.getContext("2d");
+            var cw=canvas.width;
+            var ch=canvas.height;
+            var maxW=1280;
+            var maxH=1024;
+
+            var output = document.getElementById('myInput');
+	        var img = new Image;
+            img.onload = function() {
+                var iw=img.width;
+                var ih=img.height;
+                var scale=Math.min((maxW/iw),(maxH/ih));
+                var iwScaled=iw*scale;
+                var ihScaled=ih*scale;
+                canvas.width=iwScaled;
+                canvas.height=ihScaled;
+                ctx.drawImage(img,0,0,iwScaled,ihScaled);
+     	        output.value = canvas.toDataURL("../image/jpeg",1);
+            }
+            img.src = dataURL
+        });
+    }
+    
+    function loader(){
+		document.getElementById('loader').style.display = 'Block';
+ 
+	}
+
+</script>
+
+</html>

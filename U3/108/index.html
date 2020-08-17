@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style/style.css?rnd=132">
+  
+    <!--***** dos lineas de scripts para guardar imagen-->
+    <script type="text/javascript" src="../../js/html2canvas.js"></script>
+    <script type="text/javascript" src="../../js/html2canvas.min.js"></script>
+    <!--***** Fin de dos lineas de scripts para guardar imagen-->
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+      <div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1099.000000" width="872.000000" src ="bgimg/fondo.jpg"/></nobr></div>
+        <!--Empezar a agregar contenido-->
+        
+		<span style="position: absolute; top: 197px; left: 320px">
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res1"></textarea><br>
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res2"></textarea><br>
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res3"></textarea>
+		</span>
+      <span style="position: absolute; top: 287px; left: 320px">
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res4"></textarea><br>
+	  <textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res5"></textarea>
+	  </span>
+      <span style="position: absolute; top: 378px; left: 322px">
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res6"></textarea><br>
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res7"></textarea><br>
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res8"></textarea><br>
+	  <textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res9"></textarea>
+	  </span>
+      <span style="position: absolute; top: 510px; left: 323px">
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res10"></textarea>
+		</span>
+      <span style="position: absolute; top: 559px; left: 321px">
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res11"></textarea><br>
+	  <textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res12"></textarea>
+		</span>
+      <span style="position: absolute; top: 629px; left: 321px">
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res13"></textarea><br>
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res14"></textarea><br>
+	  <textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res15"></textarea>
+		</span>
+      <span style="position: absolute; top: 719px; left: 321px">
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res16"></textarea><br>
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res17"></textarea><br>
+	  <textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res18"></textarea>
+		</span>
+      <span style="position: absolute; top: 811px; left: 321px">
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res19"></textarea><br>
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res20"></textarea><br>
+	  <textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res21"></textarea>
+		</span>
+      <span style="position: absolute; top: 900px; left: 322px">
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res22"></textarea><br>
+	  <textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res23"></textarea>
+		</span>
+      <span style="position: absolute; top: 971px; left: 321px">
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res24"></textarea><br>
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res25"></textarea><br>
+			<textarea rows = "1" cols = "60" maxlength = "60" id="quim_p108res26"></textarea>
+		</span>
+       
+        <!--Fin del contenido-->
+           <!-- FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<form style="margin-top: 1070px;margin-left: 190px; position: absolute; z-index: 2;" id="myForm" action="../../send.php" method="post">
+			<textarea style="display:none;" id="myInput" name = "imagen" maxlength="10"></textarea>
+			<input type="button" onclick="save_data()" value="Guardar"  class="btn btn-primary">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" onclick="send_data(); loader(); return false" value="Enviar" class="btn btn-primary"> 
+			<input type="hidden" id="quim_regNA" name="quim_regNA">
+			<input type="hidden" id="quim_regGP" name="quim_regGP">
+			<input type="hidden" id="quim_regCA" name="quim_regCA">
+			<input type="hidden" id="quim_regND" name="quim_regND">
+			<input type="hidden" id="quim_regCD" name="quim_regCD">
+		</form>
+
+		<!-- FIN FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<div id="loader" style="display:none; margin-top: 1060px;margin-left: 190px; position: absolute; z-index: 2;">
+			<img src="../../img/carga.gif"  width="180px" height="65px">
+		</div>
+            
+    </div>       
+</body>
+<script type="text/javascript">
+	//Carga datos del registro
+    document.getElementById('quim_regNA').value = localStorage.getItem('quim_regNA');
+    document.getElementById('quim_regGP').value = localStorage.getItem('quim_regGP');
+    document.getElementById('quim_regCA').value = localStorage.getItem('quim_regCA');
+    document.getElementById('quim_regND').value = localStorage.getItem('quim_regND');
+    document.getElementById('quim_regCD').value = localStorage.getItem('quim_regCD');
+
+	 document.getElementById('quim_p108res1').value = localStorage.getItem('quim_p108res1');
+    document.getElementById('quim_p108res2').value = localStorage.getItem('quim_p108res2');
+    document.getElementById('quim_p108res3').value = localStorage.getItem('quim_p108res3');
+    document.getElementById('quim_p108res4').value = localStorage.getItem('quim_p108res4');
+    document.getElementById('quim_p108res5').value = localStorage.getItem('quim_p108res5');
+    document.getElementById('quim_p108res6').value = localStorage.getItem('quim_p108res6');
+    document.getElementById('quim_p108res7').value = localStorage.getItem('quim_p108res7');
+    document.getElementById('quim_p108res8').value = localStorage.getItem('quim_p108res8');
+    document.getElementById('quim_p108res9').value = localStorage.getItem('quim_p108res9');
+    document.getElementById('quim_p108res10').value = localStorage.getItem('quim_p108res10');
+    document.getElementById('quim_p108res11').value = localStorage.getItem('quim_p108res11');
+    document.getElementById('quim_p108res12').value = localStorage.getItem('quim_p108res12');
+    document.getElementById('quim_p108res13').value = localStorage.getItem('quim_p108res13');
+    document.getElementById('quim_p108res14').value = localStorage.getItem('quim_p108res14');
+    document.getElementById('quim_p108res15').value = localStorage.getItem('quim_p108res15');
+    document.getElementById('quim_p108res16').value = localStorage.getItem('quim_p108res16');
+    document.getElementById('quim_p108res17').value = localStorage.getItem('quim_p108res17');
+    document.getElementById('quim_p108res18').value = localStorage.getItem('quim_p108res18');
+    document.getElementById('quim_p108res19').value = localStorage.getItem('quim_p108res19');
+    document.getElementById('quim_p108res20').value = localStorage.getItem('quim_p108res20');
+    document.getElementById('quim_p108res21').value = localStorage.getItem('quim_p108res21');
+    document.getElementById('quim_p108res22').value = localStorage.getItem('quim_p108res22');
+    document.getElementById('quim_p108res23').value = localStorage.getItem('quim_p108res23');
+    document.getElementById('quim_p108res24').value = localStorage.getItem('quim_p108res24');
+    document.getElementById('quim_p108res25').value = localStorage.getItem('quim_p108res25');
+    document.getElementById('quim_p108res26').value = localStorage.getItem('quim_p108res26');
+    
+
+    function save_data(){
+        var quim_p108res1 = document.getElementById('quim_p108res1').value;
+        localStorage.setItem('quim_p108res1', quim_p108res1);
+        var quim_p108res2 = document.getElementById('quim_p108res2').value;
+        localStorage.setItem('quim_p108res2', quim_p108res2);
+        var quim_p108res3 = document.getElementById('quim_p108res3').value;
+        localStorage.setItem('quim_p108res3', quim_p108res3);
+        var quim_p108res4 = document.getElementById('quim_p108res4').value;
+        localStorage.setItem('quim_p108res4', quim_p108res4);
+        var quim_p108res5 = document.getElementById('quim_p108res5').value;
+        localStorage.setItem('quim_p108res5', quim_p108res5);
+        var quim_p108res6 = document.getElementById('quim_p108res6').value;
+        localStorage.setItem('quim_p108res6', quim_p108res6);
+        var quim_p108res7 = document.getElementById('quim_p108res7').value;
+        localStorage.setItem('quim_p108res7', quim_p108res7);
+        var quim_p108res8 = document.getElementById('quim_p108res8').value;
+        localStorage.setItem('quim_p108res8', quim_p108res8);
+        var quim_p108res9 = document.getElementById('quim_p108res9').value;
+        localStorage.setItem('quim_p108res9', quim_p108res9);
+        var quim_p108res10 = document.getElementById('quim_p108res10').value;
+        localStorage.setItem('quim_p108res10', quim_p108res10);
+        var quim_p108res11 = document.getElementById('quim_p108res11').value;
+        localStorage.setItem('quim_p108res11', quim_p108res11);
+        var quim_p108res12 = document.getElementById('quim_p108res12').value;
+        localStorage.setItem('quim_p108res12', quim_p108res12);
+        var quim_p108res13 = document.getElementById('quim_p108res13').value;
+        localStorage.setItem('quim_p108res13', quim_p108res13);
+        var quim_p108res14 = document.getElementById('quim_p108res14').value;
+        localStorage.setItem('quim_p108res14', quim_p108res14);
+        var quim_p108res15 = document.getElementById('quim_p108res15').value;
+        localStorage.setItem('quim_p108res15', quim_p108res15);
+        var quim_p108res16 = document.getElementById('quim_p108res16').value;
+        localStorage.setItem('quim_p108res16', quim_p108res16);
+        var quim_p108res17 = document.getElementById('quim_p108res17').value;
+        localStorage.setItem('quim_p108res17', quim_p108res17);
+        var quim_p108res18 = document.getElementById('quim_p108res18').value;
+        localStorage.setItem('quim_p108res18', quim_p108res18);
+        var quim_p108res19 = document.getElementById('quim_p108res19').value;
+        localStorage.setItem('quim_p108res19', quim_p108res19);
+        var quim_p108res20 = document.getElementById('quim_p108res20').value;
+        localStorage.setItem('quim_p108res20', quim_p108res20);
+        var quim_p108res21 = document.getElementById('quim_p108res21').value;
+        localStorage.setItem('quim_p108res21', quim_p108res21);
+        var quim_p108res22 = document.getElementById('quim_p108res22').value;
+        localStorage.setItem('quim_p108res22', quim_p108res22);
+        var quim_p108res23 = document.getElementById('quim_p108res23').value;
+        localStorage.setItem('quim_p108res23', quim_p108res23);
+        var quim_p108res24 = document.getElementById('quim_p108res24').value;
+        localStorage.setItem('quim_p108res24', quim_p108res24);
+        var quim_p108res25 = document.getElementById('quim_p108res25').value;
+        localStorage.setItem('quim_p108res25', quim_p108res25);
+        var quim_p108res26 = document.getElementById('quim_p108res26').value;
+        localStorage.setItem('quim_p108res26', quim_p108res26);
+        
+        alert("Guardado correctamente");
+    }
+
+    function send_data(){
+        pantallazo();
+        setTimeout(function(){document.getElementById("myForm").submit();}, 3000);
+    }
+
+    function pantallazo(){
+
+        html2canvas(document.body).then(canvas => {
+        	var dataURL = canvas.toDataURL();
+            console.log(dataURL);
+            document.getElementById("myInput").value = dataURL;
+            var canvas = document.createElement("canvas");
+            var ctx=canvas.getContext("2d");
+            var cw=canvas.width;
+            var ch=canvas.height;
+            var maxW=1280;
+            var maxH=1024;
+
+            var output = document.getElementById('myInput');
+	        var img = new Image;
+            img.onload = function() {
+                var iw=img.width;
+                var ih=img.height;
+                var scale=Math.min((maxW/iw),(maxH/ih));
+                var iwScaled=iw*scale;
+                var ihScaled=ih*scale;
+                canvas.width=iwScaled;
+                canvas.height=ihScaled;
+                ctx.drawImage(img,0,0,iwScaled,ihScaled);
+     	        output.value = canvas.toDataURL("../image/jpeg",1);
+            }
+            img.src = dataURL
+        });
+    }
+    
+    function loader(){
+		document.getElementById('loader').style.display = 'Block';
+ 
+	}
+
+</script>
+
+</html>

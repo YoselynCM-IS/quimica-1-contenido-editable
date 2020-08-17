@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../style/style.css?rnd=132">
+  
+    <!--***** dos lineas de scripts para guardar imagen-->
+    <script type="text/javascript" src="../../js/html2canvas.js"></script>
+    <script type="text/javascript" src="../../js/html2canvas.min.js"></script>
+    <!--***** Fin de dos lineas de scripts para guardar imagen-->
+
+</head>
+
+<body>
+
+    <div id="contenedor">
+      <div style="position:absolute;top:0.000000px;left:0.000000px"><nobr><img height="1099.000000" width="872.000000" src ="bgimg/fondo.jpg"/></nobr></div>
+        <!--Empezar a agregar contenido-->
+              <span style="position: absolute; top: 892px; left: 489px">
+			<textarea rows = "1" cols = "5" maxlength = "5" id="quim_p145res1"></textarea>
+		</span>
+     <span style="position: absolute; top: 942px; left: 214px">
+	 <textarea rows = "1" cols = "5" maxlength = "5" id="quim_p145res2"></textarea>
+		</span>
+     <span style="position: absolute; top: 972px; left: 457px">
+			<textarea rows = "1" cols = "5" maxlength = "5" id="quim_p145res3"></textarea>
+		</span>
+		
+		<span style="position: absolute; top: 205px; left: 125px">
+			<input type="checkbox" id="quim_p145res4">
+		</span>
+      <span style="position: absolute; top: 225px; left: 125px">
+			<input type="checkbox" id="quim_p145res5">
+		</span>
+      <span style="position: absolute; top: 205px; left: 460px">
+			<input type="checkbox" id="quim_p145res6">
+		</span>
+      <span style="position: absolute; top: 225px; left: 460px">
+			<input type="checkbox" id="quim_p145res7">
+		</span>
+      
+      <span style="position: absolute; top: 275px; left: 125px">
+			<input type="checkbox" id="quim_p145res8">
+		</span>
+      <span style="position: absolute; top: 295px; left: 125px">
+			<input type="checkbox" id="quim_p145res9">
+		</span>
+      <span style="position: absolute; top: 275px; left: 460px">
+			<input type="checkbox" id="quim_p145res10">
+		</span>
+      <span style="position: absolute; top: 295px; left: 460px">
+			<input type="checkbox" id="quim_p145res11">
+		</span>
+      
+      <span style="position: absolute; top: 415px; left: 125px">
+			<input type="checkbox" id="quim_p145res12">
+		</span>
+      <span style="position: absolute; top: 435px; left: 125px">
+			<input type="checkbox" id="quim_p145res13">
+		</span>
+      <span style="position: absolute; top: 435px; left: 460px">
+			<input type="checkbox" id="quim_p145res14">
+		</span>
+      <span style="position: absolute; top: 415px; left: 460px">
+			<input type="checkbox" id="quim_p145res15">
+		</span>
+     
+     <span style="position: absolute; top: 485px; left: 125px">
+			<input type="checkbox" id="quim_p145res16">
+		</span>
+      <span style="position: absolute; top: 505px; left: 125px">
+			<input type="checkbox" id="quim_p145res17">
+		</span>
+      <span style="position: absolute; top: 505px; left: 460px">
+			<input type="checkbox" id="quim_p145res18">
+		</span>
+      <span style="position: absolute; top: 485px; left: 460px">
+			<input type="checkbox" id="quim_p145res19">
+		</span>
+     
+     <span style="position: absolute; top: 555px; left: 125px">
+			<input type="checkbox" id="quim_p145res20">
+		</span>
+      <span style="position: absolute; top: 575px; left: 125px">
+			<input type="checkbox" id="quim_p145res21">
+		</span>
+      <span style="position: absolute; top: 595px; left: 460px">
+			<input type="checkbox" id="quim_p145res22">
+		</span>
+      <span style="position: absolute; top: 555px; left: 460px">
+			<input type="checkbox" id="quim_p145res23">
+		</span>
+     
+     <span style="position: absolute; top: 648px; left: 125px">
+			<input type="checkbox" id="quim_p145res24">
+		</span>
+      <span style="position: absolute; top: 688px; left: 125px">
+			<input type="checkbox" id="quim_p145res25">
+		</span>
+      <span style="position: absolute; top: 667px; left: 460px">
+			<input type="checkbox" id="quim_p145res26">
+		</span>
+      <span style="position: absolute; top: 648px; left: 460px">
+			<input type="checkbox" id="quim_p145res27">
+		</span>
+     
+     <span style="position: absolute; top: 739px; left: 125px">
+			<input type="checkbox" id="quim_p145res28">
+		</span>
+      <span style="position: absolute; top: 759px; left: 125px">
+			<input type="checkbox" id="quim_p145res29">
+		</span>
+      <span style="position: absolute; top: 778px; left: 460px">
+			<input type="checkbox" id="quim_p145res30">
+		</span>
+      <span style="position: absolute; top: 739px; left: 460px">
+			<input type="checkbox" id="quim_p145res31">
+		</span>
+      
+
+      
+       
+        <!--Fin del contenido-->
+           <!-- FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<form style="margin-top: 1070px;margin-left: 190px; position: absolute; z-index: 2;" id="myForm" action="../../send.php" method="post">
+			<textarea style="display:none;" id="myInput" name = "imagen" maxlength="10"></textarea>
+			<input type="button" onclick="save_data()" value="Guardar"  class="btn btn-primary">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="button" onclick="send_data(); loader(); return false" value="Enviar" class="btn btn-primary"> 
+			<input type="hidden" id="quim_regNA" name="quim_regNA">
+			<input type="hidden" id="quim_regGP" name="quim_regGP">
+			<input type="hidden" id="quim_regCA" name="quim_regCA">
+			<input type="hidden" id="quim_regND" name="quim_regND">
+			<input type="hidden" id="quim_regCD" name="quim_regCD">
+		</form>
+
+		<!-- FIN FORMULARIO AL FINAL DEL CONTENIDO -->
+
+		<div id="loader" style="display:none; margin-top: 1060px;margin-left: 190px; position: absolute; z-index: 2;">
+			<img src="../../img/carga.gif"  width="180px" height="65px">
+		</div>
+            
+    </div>       
+</body>
+<script type="text/javascript">
+	//Carga datos del registro
+    document.getElementById('quim_regNA').value = localStorage.getItem('quim_regNA');
+    document.getElementById('quim_regGP').value = localStorage.getItem('quim_regGP');
+    document.getElementById('quim_regCA').value = localStorage.getItem('quim_regCA');
+    document.getElementById('quim_regND').value = localStorage.getItem('quim_regND');
+    document.getElementById('quim_regCD').value = localStorage.getItem('quim_regCD');
+
+	 document.getElementById('quim_p145res1').value = localStorage.getItem('quim_p145res1');
+    document.getElementById('quim_p145res2').value = localStorage.getItem('quim_p145res2');
+    document.getElementById('quim_p145res3').value = localStorage.getItem('quim_p145res3');
+     document.getElementById('quim_p145res4').value = localStorage.getItem('quim_p145res4');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res4').value == "1")
+        document.getElementById("quim_p145res4").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('quim_p145res5').value = localStorage.getItem('quim_p145res5');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res5').value == "1")
+        document.getElementById("quim_p145res5").checked = true; 
+
+    document.getElementById('quim_p145res6').value = localStorage.getItem('quim_p145res6');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res6').value == "1")
+        document.getElementById("quim_p145res6").checked = true; 
+
+    document.getElementById('quim_p145res7').value = localStorage.getItem('quim_p145res7');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res7').value == "1")
+        document.getElementById("quim_p145res7").checked = true; 
+
+    document.getElementById('quim_p145res8').value = localStorage.getItem('quim_p145res8');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res8').value == "1")
+        document.getElementById("quim_p145res8").checked = true; 
+
+    document.getElementById('quim_p145res9').value = localStorage.getItem('quim_p145res9');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res9').value == "1")
+        document.getElementById("quim_p145res9").checked = true; 
+
+    document.getElementById('quim_p145res10').value = localStorage.getItem('quim_p145res10');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res10').value == "1")
+        document.getElementById("quim_p145res10").checked = true; 
+
+    document.getElementById('quim_p145res11').value = localStorage.getItem('quim_p145res11');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res11').value == "1")
+        document.getElementById("quim_p145res11").checked = true; 
+
+    document.getElementById('quim_p145res12').value = localStorage.getItem('quim_p145res12');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res12').value == "1")
+        document.getElementById("quim_p145res12").checked = true; 
+
+    document.getElementById('quim_p145res13').value = localStorage.getItem('quim_p145res13');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res13').value == "1")
+        document.getElementById("quim_p145res13").checked = true; 
+
+    document.getElementById('quim_p145res14').value = localStorage.getItem('quim_p145res14');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res14').value == "1")
+        document.getElementById("quim_p145res14").checked = true; 
+
+    document.getElementById('quim_p145res15').value = localStorage.getItem('quim_p145res15');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res15').value == "1")
+        document.getElementById("quim_p145res15").checked = true; 
+
+    document.getElementById('quim_p145res16').value = localStorage.getItem('quim_p145res16');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res16').value == "1")
+        document.getElementById("quim_p145res16").checked = true; 
+
+    document.getElementById('quim_p145res17').value = localStorage.getItem('quim_p145res17');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res17').value == "1")
+        document.getElementById("quim_p145res17").checked = true; 
+
+    document.getElementById('quim_p145res18').value = localStorage.getItem('quim_p145res18');
+     // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res18').value == "1")
+        document.getElementById("quim_p145res18").checked = true; 
+
+    document.getElementById('quim_p145res19').value = localStorage.getItem('quim_p145res19');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    //comprobar si el valor es 1 se selecciona 
+    if(document.getElementById('quim_p145res19').value == "1")
+        document.getElementById("quim_p145res19").checked = true; // si es uno se activa en checkbox
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('quim_p145res20').value = localStorage.getItem('quim_p145res20');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res20').value == "1")
+        document.getElementById("quim_p145res20").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('quim_p145res21').value = localStorage.getItem('quim_p145res21');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res21').value == "1")
+        document.getElementById("quim_p145res21").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('quim_p145res22').value = localStorage.getItem('quim_p145res22');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res22').value == "1")
+        document.getElementById("quim_p145res22").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('quim_p145res23').value = localStorage.getItem('quim_p145res23');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res23').value == "1")
+        document.getElementById("quim_p145res23").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('quim_p145res24').value = localStorage.getItem('quim_p145res24');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res24').value == "1")
+        document.getElementById("quim_p145res24").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('quim_p145res25').value = localStorage.getItem('quim_p145res25');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res25').value == "1")
+        document.getElementById("quim_p145res25").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('quim_p145res26').value = localStorage.getItem('quim_p145res26');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res26').value == "1")
+        document.getElementById("quim_p145res26").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('quim_p145res27').value = localStorage.getItem('quim_p145res27');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res27').value == "1")
+        document.getElementById("quim_p145res27").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('quim_p145res28').value = localStorage.getItem('quim_p145res28');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res28').value == "1")
+        document.getElementById("quim_p145res28").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('quim_p145res29').value = localStorage.getItem('quim_p145res29');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res29').value == "1")
+        document.getElementById("quim_p145res29").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('quim_p145res30').value = localStorage.getItem('quim_p145res30');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res30').value == "1")
+        document.getElementById("quim_p145res30").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    document.getElementById('quim_p145res31').value = localStorage.getItem('quim_p145res31');
+    // ** INICIO ACTIVACION CHECKBOK ** //
+    if(document.getElementById('quim_p145res31').value == "1")
+        document.getElementById("quim_p145res31").checked = true; 
+    // ** FIN ACTIVACION CHECKBOK ** //
+
+    function save_data(){
+        var quim_p145res1 = document.getElementById('quim_p145res1').value;
+        localStorage.setItem('quim_p145res1', quim_p145res1);
+        var quim_p145res2 = document.getElementById('quim_p145res2').value;
+        localStorage.setItem('quim_p145res2', quim_p145res2);
+        var quim_p145res3 = document.getElementById('quim_p145res3').value;
+        localStorage.setItem('quim_p145res3', quim_p145res3);
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res4').checked;
+        if(isChecked){
+            var quim_p145res4 = "1";
+        }    
+        localStorage.setItem('quim_p145res4', quim_p145res4);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res5').checked;
+        if(isChecked){
+            var quim_p145res5 = "1";
+        }    
+        localStorage.setItem('quim_p145res5', quim_p145res5);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res6').checked;
+        if(isChecked){
+            var quim_p145res6 = "1";
+        }    
+        localStorage.setItem('quim_p145res6', quim_p145res6);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res7').checked;
+        if(isChecked){
+            var quim_p145res7 = "1";
+        }    
+        localStorage.setItem('quim_p145res7', quim_p145res7);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res8').checked;
+        if(isChecked){
+            var quim_p145res8 = "1";
+        }    
+        localStorage.setItem('quim_p145res8', quim_p145res8);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res9').checked;
+        if(isChecked){
+            var quim_p145res9 = "1";
+        }    
+        localStorage.setItem('quim_p145res9', quim_p145res9);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res10').checked;
+        if(isChecked){
+            var quim_p145res10 = "1";
+        }    
+        localStorage.setItem('quim_p145res10', quim_p145res10);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res11').checked;
+        if(isChecked){
+            var quim_p145res11 = "1";
+        }    
+        localStorage.setItem('quim_p145res11', quim_p145res11);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res12').checked;
+        if(isChecked){
+            var quim_p145res12 = "1";
+        }    
+        localStorage.setItem('quim_p145res12', quim_p145res12);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res13').checked;
+        if(isChecked){
+            var quim_p145res13 = "1";
+        }    
+        localStorage.setItem('quim_p145res13', quim_p145res13);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res14').checked;
+        if(isChecked){
+            var quim_p145res14 = "1";
+        }    
+        localStorage.setItem('quim_p145res14', quim_p145res14);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res15').checked;
+        if(isChecked){
+            var quim_p145res15 = "1";
+        }    
+        localStorage.setItem('quim_p145res15', quim_p145res15);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res16').checked;
+        if(isChecked){
+            var quim_p145res16 = "1";
+        }    
+        localStorage.setItem('quim_p145res16', quim_p145res16);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res17').checked;
+        if(isChecked){
+            var quim_p145res17 = "1";
+        }    
+        localStorage.setItem('quim_p145res17', quim_p145res17);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res18').checked;
+        if(isChecked){
+            var quim_p145res18 = "1";
+        }    
+        localStorage.setItem('quim_p145res18', quim_p145res18);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res19').checked;
+        if(isChecked){
+            var quim_p145res19 = "1";
+        }
+        localStorage.setItem('quim_p145res19', quim_p145res19);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res20').checked;
+        if(isChecked){
+            var quim_p145res20 = "1";
+        }    
+        localStorage.setItem('quim_p145res20', quim_p145res20);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res21').checked;
+        if(isChecked){
+            var quim_p145res21 = "1";
+        }    
+        localStorage.setItem('quim_p145res21', quim_p145res21);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res22').checked;
+        if(isChecked){
+            var quim_p145res22 = "1";
+        }    
+        localStorage.setItem('quim_p145res22', quim_p145res22);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res23').checked;
+        if(isChecked){
+            var quim_p145res23 = "1";
+        }    
+        localStorage.setItem('quim_p145res23', quim_p145res23);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res24').checked;
+        if(isChecked){
+            var quim_p145res24 = "1";
+        }    
+        localStorage.setItem('quim_p145res24', quim_p145res24);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res25').checked;
+        if(isChecked){
+            var quim_p145res25 = "1";
+        }    
+        localStorage.setItem('quim_p145res25', quim_p145res25);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res26').checked;
+        if(isChecked){
+            var quim_p145res26 = "1";
+        }    
+        localStorage.setItem('quim_p145res26', quim_p145res26);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res27').checked;
+        if(isChecked){
+            var quim_p145res27 = "1";
+        }    
+        localStorage.setItem('quim_p145res27', quim_p145res27);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res28').checked;
+        if(isChecked){
+            var quim_p145res28 = "1";
+        }    
+        localStorage.setItem('quim_p145res28', quim_p145res28);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res29').checked;
+        if(isChecked){
+            var quim_p145res29 = "1";
+        }    
+        localStorage.setItem('quim_p145res29', quim_p145res29);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res30').checked;
+        if(isChecked){
+            var quim_p145res30 = "1";
+        }    
+        localStorage.setItem('quim_p145res30', quim_p145res30);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        //** INICIO PARA GUARDAR CHECKBOX **//
+        var isChecked = document.getElementById('quim_p145res31').checked;
+        if(isChecked){
+            var quim_p145res31 = "1";
+        }    
+        localStorage.setItem('quim_p145res31', quim_p145res31);
+        //** FIN PARA GUARDAR CHECKBOX **//
+
+        alert("Guardado correctamente");
+    }
+
+    function send_data(){
+        pantallazo();
+        setTimeout(function(){document.getElementById("myForm").submit();}, 3000);
+    }
+
+    function pantallazo(){
+
+        html2canvas(document.body).then(canvas => {
+        	var dataURL = canvas.toDataURL();
+            console.log(dataURL);
+            document.getElementById("myInput").value = dataURL;
+            var canvas = document.createElement("canvas");
+            var ctx=canvas.getContext("2d");
+            var cw=canvas.width;
+            var ch=canvas.height;
+            var maxW=1280;
+            var maxH=1024;
+
+            var output = document.getElementById('myInput');
+	        var img = new Image;
+            img.onload = function() {
+                var iw=img.width;
+                var ih=img.height;
+                var scale=Math.min((maxW/iw),(maxH/ih));
+                var iwScaled=iw*scale;
+                var ihScaled=ih*scale;
+                canvas.width=iwScaled;
+                canvas.height=ihScaled;
+                ctx.drawImage(img,0,0,iwScaled,ihScaled);
+     	        output.value = canvas.toDataURL("../image/jpeg",1);
+            }
+            img.src = dataURL
+        });
+    }
+    
+    function loader(){
+		document.getElementById('loader').style.display = 'Block';
+ 
+	}
+
+</script>
+
+</html>
